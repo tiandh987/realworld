@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package realworld.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "kratos-realworld/api/realworkd/v1;v1";
+
+service RealWorld {
+
+}
