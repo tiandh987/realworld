@@ -43,6 +43,7 @@ service RealWorld {
   rpc FollerUser(FollerUserRequest) returns (ProfileReply) {
     option (google.api.http) = {
       post: "/api/profiles/{username}/follow",
+      body: "*",
     };
   }
 
@@ -112,6 +113,7 @@ service RealWorld {
   rpc FavoriteArticle(FavoriteArticleRequest) returns (SingleArticleReply) {
     option (google.api.http) = {
       post: "/api/articles/{slug}/favorite",
+      body: "*",
     };
   }
 
