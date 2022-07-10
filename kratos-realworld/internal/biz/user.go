@@ -19,6 +19,7 @@ type ProfileRepo interface {
 type UserUsecase struct {
 	ur UserRepo
 	pr ProfileRepo
+	tr TagRepo
 
 	log *log.Helper
 }
@@ -27,6 +28,7 @@ func NewUserUsecase(ur UserRepo, pr ProfileRepo, tr TagRepo, logger log.Logger) 
 	return &UserUsecase{
 		ur:  ur,
 		pr:  pr,
+		tr:  tr,
 		log: log.NewHelper(logger),
 	}
 }
